@@ -1,47 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>CARSON-NEWMAN | A CHRISTIAN UNIVERSITY</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carson-Newman</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
         }
-        .menu {
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff6600;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 2px solid #ff6600;
+            color: #ff6600;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+        .button:hover {
+            background-color: #ff6600;
+            color: #ffffff;
+        }
+        img {
             margin: 20px 0;
         }
-        .menu a {
-            text-decoration: none;
-            color: #333;
-        }
-        .menu a:hover {
-            text-decoration: underline;
-        }
-        .apply-now {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .apply-now:hover {
-            background-color: #0069d9;
+        .menu {
+            color: #ff6600;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
         }
     </style>
 </head>
 <body>
-    <h1><img src="IMG-20240620-WA0019.jpg" alt="Carson-Newman Logo" style="width: 100px; height: 100px;">
-    CARSON-NEWMAN | A CHRISTIAN UNIVERSITY</h1>
-    <div class="menu">
-        <a>FRESHMAN</a>
-        <a>TRANSFER</a>
-        <a>INTERNATIONAL</a>
-        <a>ONLINE</a>
-        <a>GRADUATE</a>
-        <a>ACCEPTED STUDENT</a>
-        <a>GIVE TO C-N</a>
+    <div class="container">
+        <div class="menu">&#9776; MENU</div>
+        <img src="logo.png" alt="Carson-Newman Logo" style="width: 150px;"/>
+        <h1>CHOOSE YOUR PATH.</h1>
+        <a href="#" class="button">FRESHMAN</a>
+        <a href="#" class="button">TRANSFER</a>
+        <a href="#" class="button">INTERNATIONAL</a>
+        <a href="#" class="button">ONLINE</a>
+        <a href="#" class="button">GRADUATE</a>
+        <a href="applicationform.html" class="button">APPLY NOW</a>
+        <a href="#" class="button">ACCEPTED STUDENT</a>
+        <a href="#" class="button">GIVE TO C-N</a>
     </div>
-    <button class="apply-now" onclick="location.href='applicationform.html'">APPLY NOW</button>
 </body>
 </html>
