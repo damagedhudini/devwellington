@@ -8,6 +8,7 @@
       <h1><img src="IMG-20240620-WA0019.jpg" alt="Carson-Newman Logo" style="width: 100px; height: 100px;">
         Carson-Newman University Registration</h1>
       <form>
+        <lab<form id="application-form">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
         <label for="idNo">ID Number:</label>
@@ -21,11 +22,30 @@
         <label for="currentSchool">Current School or College:</label>
         <input type="text" id="currentSchool" name="currentSchool" required><br><br>
         <label for="otherSchool">Other School:</label>
-        <input type="text" id="otherSchool" name="otherSchool"><br><br>
+        <select id="otherSchool" name="otherSchool">
+            <option value="">Select a program</option>
+            <option value="Nursing">Nursing</option>
+            <option value="Med School">Med School</option>
+            <option value="Law">Law</option>
+            <option value="Engineering">Engineering</option>
+        </select><br><br>
         <label for="whyScholarship">Why are you interested in our scholarship?</label>
         <textarea id="whyScholarship" name="whyScholarship" required></textarea><br><br>
         <input type="submit" value="Submit">
       </form>
+
+      <div id="submission-message" style="display: none;">Successfully submitted!</div>
+
+      <script>
+        const form = document.getElementById('application-form');
+        const submissionMessage = document.getElementById('submission-message');
+
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          submissionMessage.style.display = 'block';
+          // You can also add code here to send the form data to a server or perform other actions
+        });
+      </script>
       <div id="file-path"></div>
     </div>
 
