@@ -41,14 +41,14 @@
       <script>
         document.addEventListener('DOMContentLoaded', (event) => {
         const form = document.getElementById('application-form');
-        const submissionMessage = document.getElementById('submission-message');
 
-        form.addEventListener('submit', (e) => {
-          e.preventDefault();
-          submissionMessage.style.display = 'block';
-          // You can also add code here to send the form data to a server or perform other actions
-        });
-      </script>
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Successfully submitted!');
+      // You can also add code here to send the form data to a server or perform other actions
+    });
+  });
+</script>
       <div id="file-path"></div>
     </div>
 
