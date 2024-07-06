@@ -2,19 +2,19 @@
   <head>
     <link rel="stylesheet" href="style.css">
     <style>
-#custom-alert {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #4caf50;
-    color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
+      #custom-alert {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #4caf50;
+        color: white;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+      }
     </style>
   </head>
   <body>
@@ -22,8 +22,7 @@
       <!-- <img src="IMG-20240620-WA0019.jpg" alt="Carson-Newman Logo" style="width: 100px; height: 100px;"> -->
       <h1><img src="IMG-20240620-WA0019.jpg" alt="Carson-Newman Logo" style="width: 100px; height: 100px;">
         Carson-Newman University Registration</h1>
-      <form>
-        <lab<form id="application-form">
+      <form id="application-form">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br><br>
         <label for="idNo">ID Number:</label>
@@ -38,48 +37,40 @@
         <input type="text" id="currentSchool" name="currentSchool" required><br><br>
         <label for="otherSchool">Other School:</label>
         <select id="otherSchool" name="otherSchool">
-            <option value="">Select a program</option>
-            <option value="Nursing">Nursing Undergraduate</option>
-            <option value="Med School">Medicine</option>
-            <option value="Business">Business</option>
-            <option value="Engineering">Engineering</option>
-            <option value="Education">Education</option>
-            <option value="CompScience">Computer Science</option>
+          <option value="">Select a program</option>
+          <option value="Nursing">Nursing Undergraduate</option>
+          <option value="Med School">Medicine</option>
+          <option value="Business">Business</option>
+          <option value="Engineering">Engineering</option>
+          <option value="Education">Education</option>
+          <option value="CompScience">Computer Science</option>
         </select><br><br>
         <label for="whyScholarship">Why are you interested in our scholarship?</label>
         <textarea id="whyScholarship" name="whyScholarship" required></textarea><br><br>
         <input type="submit" value="Submit">
       </form>
 
-      <div id="submission-message" style="display: none;">Successfully submitted!</div>
+      <!-- Add this div for the custom alert -->
+      <div id="custom-alert">Successfully submitted!</div>
 
       <script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    const form = document.getElementById('application-form');
-    const alertBox = document.getElementById('custom-alert');
+        document.addEventListener('DOMContentLoaded', (event) => {
+          const form = document.getElementById('application-form');
+          const alertBox = document.getElementById('custom-alert');
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alertBox.style.display = 'block';
-        setTimeout(() => {
-            alertBox.style.display = 'none';
-        }, 7000); // Show alert for 7000 milliseconds (7 seconds)
-    });
-});
-</script>
+          form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alertBox.style.display = 'block';
+            setTimeout(() => {
+              alertBox.style.display = 'none';
+            }, 7000); // Show alert for 7000 milliseconds (7 seconds)
+          });
+        });
+      </script>
+      
       <div id="file-path"></div>
     </div>
 
-    <!-- <footer>
-      <h5>Copyrights</h5>
-      <p>&copy; 2023 Carson-Newman University. All rights reserved.</p>
-      <h5>Contacts</h5>
-      <ul>
-        <li>Phone: +18654712000</li>
-        <li>Email: <a href="carsonewmanuni@gmail.com">carsonewmanuni@gmail.com</a></li>
-        <li>Website: <a href="https://g.co/kgs/3d75HzU">Carson-Newman</a></li>
-      </ul>
-    </footer> -->
     <footer style="background-color: #032B44; color: #FFFFFF; padding: 20px;">
       <div style="display: flex; justify-content: space-between;">
         <h5 style="margin: 0;">Copyrights</h5>
@@ -89,7 +80,7 @@
         <p style="margin: 0;">&copy; 2023 Carson-Newman University. All rights reserved.</p>
         <ul style="list-style: none; padding: 0; margin: 0;">
           <li>Phone: Lorem ipsum</li>
-          <li>Email: <a href="carsonewmanuni@gmail.com" style="color: #FFFFFF;">carsonewmanuni@gmail.com</a></li>
+          <li>Email: <a href="mailto:carsonewmanuni@gmail.com" style="color: #FFFFFF;">carsonewmanuni@gmail.com</a></li>
           <li>Website: <a href="https://g.co/kgs/3d75HzU">CarsonNewmanSite</a></li>
         </ul>
       </div>
@@ -98,4 +89,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
