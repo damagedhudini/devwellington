@@ -39,13 +39,15 @@
       <div id="submission-message" style="display: none;">Successfully submitted!</div>
 
       <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-        const form = document.getElementById('application-form');
+  document.addEventListener('DOMContentLoaded', (event) => {
+    const form = document.getElementById('application-form');
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      alert('Successfully submitted!');
-      // You can also add code here to send the form data to a server or perform other actions
+      setTimeout(() => {
+        alert('Successfully submitted!');
+        // You can also add code here to send the form data to a server or perform other actions
+      }, 7000); // Delay of 2000 milliseconds (2 seconds)
     });
   });
 </script>
