@@ -1,6 +1,21 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
+    <style>
+#custom-alert {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+    </style>
   </head>
   <body>
     <div class="container">
@@ -41,15 +56,16 @@
       <script>
   document.addEventListener('DOMContentLoaded', (event) => {
     const form = document.getElementById('application-form');
+    const alertBox = document.getElementById('custom-alert');
 
     form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      setTimeout(() => {
-        alert('Successfully submitted!');
-        // You can also add code here to send the form data to a server or perform other actions
-      }, 7000); // Delay of 2000 milliseconds (2 seconds)
+        e.preventDefault();
+        alertBox.style.display = 'block';
+        setTimeout(() => {
+            alertBox.style.display = 'none';
+        }, 7000); // Show alert for 7000 milliseconds (7 seconds)
     });
-  });
+});
 </script>
       <div id="file-path"></div>
     </div>
